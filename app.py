@@ -50,5 +50,11 @@ locality_data = df[df['LOCALITY'] == selected_locality]
 st.write(f"Detailed analysis for locality: {selected_locality}")
 st.dataframe(locality_data[['ADDRESS', 'PRICE', 'PROPERTYSQFT', 'PRICE_PER_SQFT']])
 
-
+# Price per sqft distribution within the selected locality
+plt.figure(figsize=(10, 6))
+sns.histplot(locality_data['PRICE_PER_SQFT'], kde=True, bins=20, color='green')
+plt.title(f"Price per Sqft Distribution in {selected_locality}")
+plt.xlabel("Price per Sqft")
+plt.ylabel("Frequency")
+st.pyplot(plt.gcf())
 

@@ -20,3 +20,12 @@ st.title("Price per Sqft Analysis by Locality")
 st.subheader("Data Table Overview")
 st.dataframe(df[['LOCALITY', 'PRICE', 'PROPERTYSQFT', 'PRICE_PER_SQFT', 'AVG_PRICE_PER_SQFT']])
 
+# Chart 1: Price per sqft distribution
+st.subheader("Price per Sqft Distribution (Overall)")
+plt.figure(figsize=(10, 6))
+sns.histplot(df['PRICE_PER_SQFT'], kde=True, bins=30, color='blue')
+plt.title("Price per Sqft Distribution")
+plt.xlabel("Price per Sqft")
+plt.ylabel("Frequency")
+st.pyplot(plt.gcf())
+

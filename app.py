@@ -29,3 +29,18 @@ plt.xlabel("Price per Sqft")
 plt.ylabel("Frequency")
 st.pyplot(plt.gcf())
 
+# Chart 2: Comparison of average price per locality
+st.subheader("Average Price per Sqft by Locality")
+plt.figure(figsize=(12, 8))
+sns.barplot(
+    data=locality_avg_price.sort_values(by='AVG_PRICE_PER_SQFT', ascending=False),
+    x='LOCALITY', y='AVG_PRICE_PER_SQFT', palette='viridis'
+)
+plt.xticks(rotation=45)
+plt.title("Average Price per Sqft by Locality")
+plt.xlabel("Locality")
+plt.ylabel("Average Price per Sqft")
+st.pyplot(plt.gcf())
+
+
+

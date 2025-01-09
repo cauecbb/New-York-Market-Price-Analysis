@@ -42,5 +42,13 @@ plt.xlabel("Locality")
 plt.ylabel("Average Price per Sqft")
 st.pyplot(plt.gcf())
 
+# Chart 3: Interactive analysis (Select a specific locality)
+st.subheader("Specific Locality Analysis")
+selected_locality = st.selectbox("Select a Locality", df['LOCALITY'].unique())
+locality_data = df[df['LOCALITY'] == selected_locality]
+
+st.write(f"Detailed analysis for locality: {selected_locality}")
+st.dataframe(locality_data[['ADDRESS', 'PRICE', 'PROPERTYSQFT', 'PRICE_PER_SQFT']])
+
 
 

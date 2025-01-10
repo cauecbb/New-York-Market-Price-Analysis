@@ -1,4 +1,3 @@
-```markdown
 # New York Housing Market Price Analysis
 
 This project analyzes the real estate market in New York City by examining the price per square foot (Price per Sqft) for different properties and localities. The analysis is performed using a dataset containing housing prices, property square footage, and locality information.
@@ -52,4 +51,3 @@ This project is licensed under the MIT License - see the License file for detail
 ## Acknowledgments
 
 - Dataset Source: [New York Housing Market](https://www.kaggle.com/datasets/nelgiriyewithana/new-york-housing-market) (Note: Replace with the actual source if applicable).
-```
